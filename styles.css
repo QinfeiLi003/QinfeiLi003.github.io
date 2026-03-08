@@ -1,173 +1,138 @@
-/* Google Font */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #f0f0f0, #ffffff); /* Technique 1: gradient background */
-  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fb;
+  color: #222;
 }
 
-/* Header with border */
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #004080;
+.site-header {
+  background-color: #0d3b66;
   color: white;
-  border-bottom: 5px solid #0073e6; /* Technique 2: border */
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-/* Navigation */
-nav ul {
+.site-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.nav-list {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
-  padding: 10px;
-  background-color: #e6f0ff;
+  gap: 2rem;
   margin: 0;
+  padding: 1rem;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav a {
+.nav-list a {
   text-decoration: none;
-  color: #004080;
+  color: #0d3b66;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #0073e6;
+.nav-list a:hover {
+  color: #1d70b8;
 }
 
-/* Sections */
-section {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Images with filter */
-img {
-  max-width: 100%;
-  height: auto; /* maintain aspect ratio */
-  border-radius: 10px;
-  filter: drop-shadow(3px 3px 5px gray); /* Technique 3: CSS filter */
-  margin-top: 15px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #004080;
-  color: white;
-  border-top: 5px solid #0073e6;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
-/* --- Header / Footer --- */
-.site-header {
-  padding: 1rem;
-}
-
-.site-title {
-  margin: 0 0 0.5rem 0;
-}
-
-.site-footer {
-  padding: 1rem;
-  text-align: center;
-}
-
-/* --- Nav (Flexbox) --- */
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.site-nav a[aria-current="page"] {
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-/* --- Page 2 outer layout (Grid) --- */
-.page-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
+main {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.content,
-.sidebar {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
-/* --- Image keeps aspect ratio --- */
-.feature img {
+.hero img {
+  width: 280px;
   max-width: 100%;
   height: auto;
-  display: block;
+  border-radius: 12px;
 }
 
-/* --- Nested inner layout (Flexbox) --- */
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.hero-text {
+  flex: 1;
+}
+
+.intro-box {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .card {
-  flex: 1 1 240px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* --- Responsive breakpoint --- */
-@media (max-width: 800px) {
-  .page-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===== A3 Page 2 layout (Nested Grid + Flex) ===== */
-.page-grid {
+.projects-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  :contentReference[oaicite:24]{index=24}rd-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.card {
-  flex: 1 1 240px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+.project-box {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.project-box ul {
+  padding-left: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #0d3b66;
+  color: white;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
-/* Responsive */
-@media (max-width: 800px) {
-  .page-grid {
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-layout {
     grid-template-columns: 1fr;
   }
 }
