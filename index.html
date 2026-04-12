@@ -6,39 +6,10 @@
   <title>Qinfei Li | Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <h1>Qinfei Li</h1>
-    <p>
-Click the button below to learn more about my interests.
-</p>
-
-<button onclick="toggleInfo()">Show More</button>
-
-<div id="extraInfo" style="display:none; margin-top:10px;">
-  <p>
-    I am interested in product design, data analysis, and web development.
-    These areas help me build both technical and creative skills.
-  </p>
-
-  <ul>
-    <li>Product Design</li>
-    <li>Data Analysis</li>
-    <li>Web Development</li>
-    <li>User Experience</li>
-  </ul>
-</div>
-
-<script>
-function toggleInfo() {
-  var x = document.getElementById("extraInfo");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
     <p>Advertising & Digital Marketing Portfolio</p>
   </header>
 
@@ -51,6 +22,8 @@ function toggleInfo() {
   </nav>
 
   <main>
+
+    <!-- HERO SECTION -->
     <section class="hero">
       <img src="yourphoto.jpg" alt="Portrait of Qinfei Li">
       <div class="hero-text">
@@ -60,14 +33,67 @@ function toggleInfo() {
       </div>
     </section>
 
+    <!-- INTRO -->
     <section class="intro-box">
       <h2>Welcome</h2>
       <p>I am interested in combining creativity with data-driven thinking. Through my academic and internship experiences, I have developed skills in communication, campaign planning, and digital strategy. This portfolio shares some of my experiences and future goals.</p>
     </section>
+
+    <!-- ⭐ JAVASCRIPT ASSIGNMENT FEATURE -->
+    <section class="interactive-box">
+      <h2>My Interests (Interactive)</h2>
+
+      <p>
+        Click the button below to explore my interests in more detail.
+      </p>
+
+      <button id="toggleBtn" onclick="toggleInfo()">Show More</button>
+
+      <div id="extraInfo" style="
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        margin-top: 10px;
+      ">
+        <p>
+          I am interested in product design, data analysis, and web development.
+          These interests combine creativity and technical thinking.
+        </p>
+
+        <ul>
+          <li>Product Design</li>
+          <li>Data Analysis</li>
+          <li>Web Development</li>
+          <li>User Experience</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <p>&copy; 2026 Qinfei Li</p>
   </footer>
+
+  <!-- ⭐ JavaScript MUST be at bottom -->
+  <script>
+    let isOpen = false;
+
+    function toggleInfo() {
+      const content = document.getElementById("extraInfo");
+      const btn = document.getElementById("toggleBtn");
+
+      if (!isOpen) {
+        content.style.maxHeight = "300px";
+        btn.innerText = "Show Less";
+      } else {
+        content.style.maxHeight = "0px";
+        btn.innerText = "Show More";
+      }
+
+      isOpen = !isOpen;
+    }
+  </script>
+
 </body>
 </html>
