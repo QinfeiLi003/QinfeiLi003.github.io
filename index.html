@@ -9,6 +9,36 @@
 <body>
   <header class="site-header">
     <h1>Qinfei Li</h1>
+    <p>
+Click the button below to learn more about my interests.
+</p>
+
+<button onclick="toggleInfo()">Show More</button>
+
+<div id="extraInfo" style="display:none; margin-top:10px;">
+  <p>
+    I am interested in product design, data analysis, and web development.
+    These areas help me build both technical and creative skills.
+  </p>
+
+  <ul>
+    <li>Product Design</li>
+    <li>Data Analysis</li>
+    <li>Web Development</li>
+    <li>User Experience</li>
+  </ul>
+</div>
+
+<script>
+function toggleInfo() {
+  var x = document.getElementById("extraInfo");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
     <p>Advertising & Digital Marketing Portfolio</p>
   </header>
 
