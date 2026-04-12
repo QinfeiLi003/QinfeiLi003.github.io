@@ -97,3 +97,49 @@
 
 </body>
 </html>
+<!-- ⭐ Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<h2 style="margin-top:40px;">My Skill Distribution</h2>
+
+<p>
+This chart represents my academic and professional focus areas in digital marketing and information systems.
+</p>
+
+<canvas id="myChart" width="400" height="300"></canvas>
+
+<script>
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: [
+      'Data Analysis',
+      'Product Design',
+      'Web Development',
+      'Communication'
+    ],
+    datasets: [{
+      label: 'Skill Level (self-assessed)',
+      data: [85, 80, 75, 90],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text: 'My Professional Skill Breakdown'
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
+</script>
